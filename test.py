@@ -4,7 +4,7 @@
 import requests
 import pandas as pd
 
-url = "https://qa.bki.dk/api/stats/ncr"
+url = "https://qa.bki.dk/api/stats/CustomerComplaint" #/NCR
 
 payload={}
 headers = {
@@ -25,5 +25,4 @@ response_data = response_json['data']
 df_response_data = pd.DataFrame(columns = response_headers_keys)
 df_response_data = pd.DataFrame(response_data)
 
-# df_response = pd.DataFrame.from_dict(response_json)
 
