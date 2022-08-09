@@ -35,4 +35,4 @@ for requested_data in data_to_export:
         excel_writer.close()        
 
 f.log_insert("Sherlock data - flow_management.py"
-             ,f"Data export finished.") 
+             ,"Data export finished.") 
