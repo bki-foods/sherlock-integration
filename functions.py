@@ -11,7 +11,7 @@ def log_insert(event: str, note: str):
     """Inserts a record into BKI_Datastore dbo.log with event and note."""
     dict_log = {"Note": note
                 ,"Event": event}
-    pd.DataFrame(data=dict_log, index=[0]).to_sql("Log", con=si.engine_ds, schema="dbo", if_exists="append", index=False)
+    pd.DataFrame(data=dict_log, index=[0]).to_sql("Log", con=si.con_ds, schema="dbo", if_exists="append", index=False)
 
 # Write dataframe into Excel sheet
 def insert_dataframe_into_excel (engine, dataframe, sheetname: str, include_index: bool = False):
